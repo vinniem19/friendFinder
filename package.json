@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A friend finder app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinniem19/friendFinder.git"
+  },
+  "author": "vinnie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinniem19/friendFinder/issues"
+  },
+  "homepage": "https://github.com/vinniem19/friendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  }
+}
