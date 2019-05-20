@@ -1,278 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>FF Survey</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
+
+<head>
+    <meta charset="utf-8">
+    <title>FF Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
             <h1>Survey Questions</h1>
         </div>
-        
+
         <div class="row">
-            <form>
+            <form id="name-form">
                 <div class="form-group">
-                  <label for="formInput">Name (Required)</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="your name" required=true>
+                    <label for="name-input">Name (Required)</label>
+                    <input type="text" size=100 class="form-control" id="name-input" placeholder="your name"
+                        required=true>
                 </div>
                 <div class="form-group">
-                  <label for="formGroupExampleInput2">Link to photo image (Required)</label>
-                  <input type="text" class="form-control" id="formInput2" placeholder="http://your image link" required=true>
+                    <label for="link-input">Link to photo image (Required)</label>
+                    <input type="text" class="form-control" id="link-input" placeholder="http://your image link"
+                        required=true>
                 </div>
-              </form>
-            </div>
-            <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                <!--New question-->
-            <h3><strong>Question 1</strong></h3>
-            </div>
-        <div class="row">
-            <h4>Your mind is always buzzing with unexplored ideas and plans</h4>
+            </form>
         </div>
+        <!-- This is the select options box for all 10 questions -->
         <div class="row">
-            <div class="form-group">
-                    <label for="q1">Select an option</label>
-                    <select class="form-control" id="q1">
+            <!--New question-->
+            <h3><strong>Question 1</strong></h3>
+        </div>
+        <form id="question-form">
+            <div class="row">
+                <h4>Your mind is always buzzing with unexplored ideas and plans</h4>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="answer1">Select an option</label>
+                    <select class="form-control" id="answer1">
                         <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5 (Strongly Agree)</option>
-                      </select> 
-                    </div>              
-              </div>
-              <!--End question-->
-
-              <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 2</strong></h3>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 2</strong></h3>
+            </div>
             <div class="row">
                 <h4>Generally speaking, you rely more on your experience than imagination.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 3</strong></h3>
+                    <label for="answer2">Select an option</label>
+                    <select class="form-control" id="answer2">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 3</strong></h3>
+            </div>
             <div class="row">
                 <h4>You find it easy to stay relaxed and focused even when there is pressure.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 4</strong></h3>
+                    <label for="answer3">Select an option</label>
+                    <select class="form-control" id="answer3">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 4</strong></h3>
+            </div>
             <div class="row">
                 <h4>You rarely do something just out of sheer quriosity.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 5</strong></h3>
+                    <label for="answer4">Select an option</label>
+                    <select class="form-control" id="answer4">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 5</strong></h3>
+            </div>
             <div class="row">
                 <h4>People can rarely upset you.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 6</strong></h3>
+                    <label for="answer5">Select an option</label>
+                    <select class="form-control" id="answer5">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 6</strong></h3>
+            </div>
             <div class="row">
                 <h4>It is often difficult for you to relate to other people's feelings.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 7</strong></h3>
+                    <label for="answer6">Select an option</label>
+                    <select class="form-control" id="answer6">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 7</strong></h3>
+            </div>
             <div class="row">
                 <h4>In a discussion, truth should be more important than people's sensitivities.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 8</strong></h3>
+                    <label for="answer7">Select an option</label>
+                    <select class="form-control" id="answer7">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 8</strong></h3>
+            </div>
             <div class="row">
                 <h4>You rarely get carried away by fantasies and ideas.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 9</strong></h3>
+                    <label for="answer8">Select an option</label>
+                    <select class="form-control" id="answer8">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
             <div class="row">
-                <h4>You think everyone's views should be respected regardless of whether they are supported by fact or not.</h4>
+                <!--New question-->
+                <h3><strong>Question 9</strong></h3>
+            </div>
+            <div class="row">
+                <h4>You think everyone's views should be respected regardless of whether they are supported by fact or
+                    not.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
-
-                  <!-- This is the select options box for all 10 questions -->
-            <div class="row">
-                    <!--New question-->
-                <h3><strong>Question 10</strong></h3>
+                    <label for="answer9">Select an option</label>
+                    <select class="form-control" id="answer9">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
                 </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- This is the select options box for all 10 questions -->
+            <div class="row">
+                <!--New question-->
+                <h3><strong>Question 10</strong></h3>
+            </div>
             <div class="row">
                 <h4>You feel more energetic after spending time with a group of people.</h4>
             </div>
             <div class="row">
                 <div class="form-group">
-                        <label for="q1">Select an option</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                          </select> 
-                        </div>              
-                  </div>
-                  <!--End question-->
+                    <label for="answer10">Select an option</label>
+                    <select class="form-control" id="answer10">
+                        <option value=""></option>
+                        <option value="1" selected=true>1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <!--End question-->
+
+            <!-- submit button -->
+            <button type="submit" id="submitButton" class="btn btn-primary btn-large btn-block">submit</button>
+        </form>
+        <br><br>
+    </div>
+
+    <script type="text/javascript">
+            
+        $("#submitButton").on("click", function (event) {
+            event.preventDefault();
+            var newFriend =
+            {
+                "friendName": $("#name-input").val().trim(),
+                "friendPhoto": $("#link-input").val().trim(),
+                "friendScores":
+                    [
+                        $("#answer1").val(),
+                        $("#answer2").val(),
+                        $("#answer3").val(),
+                        $("#answer4").val(),
+                        $("#answer5").val(),
+                        $("#answer6").val(),
+                        $("#answer7").val(),
+                        $("#answer8").val(),
+                        $("#answer9").val(),
+                        $("#answer10").val()
+
+                    ]
+            }
+            console.log("New Friend: ", newFriend);
             
 
+            $.post("/api/friends", newFriend, function (data) {
+                if (data) {
+                    alert("We have a new friend");
+                } else {
+                    alert("something went wrong.");
+                }
+                // clears the form after one clicks submit
+                
+                
+                
 
+            });
+        });
+    </script>
 
-            
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </body>
 </html>
