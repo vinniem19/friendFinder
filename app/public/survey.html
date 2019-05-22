@@ -272,20 +272,51 @@
             <!--End question-->
 
             <!-- submit button -->
-            <button type="submit" id="submitButton" class="btn btn-primary btn-large btn-block">submit</button>
+            <button type="submit" id="submitButton" data-toggle="modal" data-target="#friendModal" class="btn btn-primary btn-large btn-block">submit</button>
         </form>
         <br><br>
     </div>
 
+    <!--Here is the modal . . . I don't think I need the button; I should be able to adjust my html for the submit button to pull in the modal with the line data-toggle="modal"-->
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="matchName"></h2>
+          <img id="matchImage" src="" style="height:300px; max-width: 100%;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
     <script type="text/javascript">
+    
+            var newFriend;
             
         $("#submitButton").on("click", function (event) {
             event.preventDefault();
             var newFriend =
             {
-                "friendName": $("#name-input").val().trim(),
-                "friendPhoto": $("#link-input").val().trim(),
-                "friendScores":
+                friendName: $("#name-input").val().trim(),
+                friendPhoto: $("#link-input").val().trim(),
+                friendScores:
                     [
                         $("#answer1").val(),
                         $("#answer2").val(),
@@ -301,7 +332,19 @@
                     ]
             }
             console.log("New Friend: ", newFriend);
-            
+
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
+
+             
+            $("#matchName").text(data.name);
+            $("#matchImage").attr("src", data.photo);
+            $("#friendModal").modal("toggle");
+        });
+            // }  else {
+               // alert("Please answer all the questions.")
+            // }
 
             $.post("/api/friends", newFriend, function (data) {
                 if (data) {
@@ -310,9 +353,6 @@
                     alert("something went wrong.");
                 }
                 // clears the form after one clicks submit
-                
-                
-                
 
             });
         });
